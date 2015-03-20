@@ -10,7 +10,7 @@ The core Segment integrations for Sherlock
 ## Example
 
 ```js
-var sherlock-integrations = require('sherlock-integrations');
+var integrations = require('sherlock-integrations');
 ```
 
 ## License
