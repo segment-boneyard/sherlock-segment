@@ -1,0 +1,13 @@
+{
+  "name": "sherlock-integrations",
+  "version": "0.0.1",
+  "repository": "segmentio/sherlock-integrations.git",
+  "description": "The core Segment integrations for Sherlock",
+  "keywords": [],
+  "main": "lib/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "1.x"
+  },
+  "license": "MIT"
+}
