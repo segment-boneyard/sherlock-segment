@@ -9,7 +9,11 @@
     "each-module": "^1.1.0"
   },
   "devDependencies": {
-    "mocha": "1.x"
+    "eslint": "^0.17.1",
+    "mocha": "^2.2.1",
+    "s-sherlock": "0.0.1",
+    "serve-static": "^1.9.2",
+    "supertest": "^0.15.0"
   },
   "publishConfig": {
     "registry": "https://segmentio.registry.nodejitsu.com"
