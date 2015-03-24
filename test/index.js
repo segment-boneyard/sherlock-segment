@@ -14,21 +14,26 @@ var url = require('url');
 var vm = require('vm');
 
 /**
- * Initialize Sherlock.
+ * Locals.
  */
 
+var lib = path.resolve(__dirname, 'lib');
 var sherlock = new Sherlock().use(integrations);
 
-describe.only('sherlock-segment', function () {
-  before(function (done) {
-    server.listen(8002, done);
-  });
+/**
+ * Tests.
+ */
 
-  after(function (done) {
-    server.close(done);
-  });
+before(function (done) {
+  server.listen(8002, done);
+});
 
-  each(path.resolve(__dirname, 'lib'), function (slug, tests) {
+after(function (done) {
+  server.close(done);
+});
+
+describe('unit tests', function () {
+  each(lib, function (slug, tests) {
     var service = require(path.join('../lib', slug));
 
     describe(service.name, function () {
@@ -46,13 +51,24 @@ describe.only('sherlock-segment', function () {
           assert.deepEqual(ctx.result, settings.expected);
         });
       });
+    });
+  });
+});
 
+// phantomjs freaks out if we run these tests mixed in with the unit tests...
+// not really sure why
+describe('integration tests', function () {
+  this.slow('3s');
+  this.timeout('10s');
+
+  each(lib, function (slug, tests) {
+    var service = require(path.join('../lib', slug));
+
+    describe(service.name, function () {
       tests.integration.forEach(function (test) {
-        it('should pass the integration test using ' + test.fixture, function (done) {
-          this.slow('3s');
-          this.timeout('10s');
-
+        it(test.fixture, function (done) {
           var url = fixture(test.fixture);
+
           sherlock.analyze(url, function (err, results) {
             if (err) return done(err);
             assert.deepEqual(results[service.name], test.expected);
