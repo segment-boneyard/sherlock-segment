@@ -1,5 +1,5 @@
 {
-  "name": "sherlock-integrations",
+  "name": "s-sherlock-segment",
   "description": "The core Segment integrations for Sherlock",
   "repository": "segmentio/sherlock-integrations.git",
   "version": "0.0.1",
@@ -9,9 +9,10 @@
     "each-module": "^1.1.0"
   },
   "devDependencies": {
+    "clone": "^1.0.1",
     "eslint": "^0.17.1",
     "mocha": "^2.2.1",
-    "s-sherlock": "0.0.1",
+    "s-sherlock": "^0.1.0",
     "serve-static": "^1.9.2",
     "supertest": "^0.15.0"
   },
