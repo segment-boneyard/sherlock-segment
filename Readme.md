@@ -1,16 +1,23 @@
 
-# sherlock-integrations
+# sherlock-segment
 
-The core Segment integrations for Sherlock
+> Segment integrations as a plugin for [Sherlock]()
 
 ## Installation
 
-    $ npm install sherlock-integrations
+    $ npm install s-sherlock-segment
 
-## Example
+## Usage
 
 ```js
-var integrations = require('sherlock-integrations');
+var integrations = require('s-sherlock-integrations');
+var sherlock = require('sherlock');
+
+sherlock()
+  .use(segment)
+  .analyze('segment.com', function (err, results) {
+    // ...
+  });
 ```
 
 ## License
