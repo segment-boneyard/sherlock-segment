@@ -1,5 +1,5 @@
 {
-  "name": "sherlock-integrations",
+  "name": "s-sherlock-segment",
   "description": "The core Segment integrations for Sherlock",
   "repository": "segmentio/sherlock-integrations.git",
   "version": "0.0.1",
