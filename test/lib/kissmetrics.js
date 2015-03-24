@@ -17,6 +17,16 @@ exports.settings = [
       }
     },
     expected: {
+      apiKey: 'a'
+    }
+  },
+  {
+    ctx: {
+      window: {
+        KM_KEY: 'b'
+      }
+    },
+    expected: {
       apiKey: 'b'
     }
   }

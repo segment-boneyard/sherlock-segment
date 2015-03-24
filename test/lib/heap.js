@@ -17,7 +17,7 @@ exports.settings = [
       }
     },
     expected: {
-      appid: 'a'
+      appId: 'a'
     }
   }
 ];

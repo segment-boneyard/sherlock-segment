@@ -10,9 +10,11 @@ exports.scripts = [
 exports.settings = [
   {
     ctx: {
-      olark: {
-        _: {
-          siteId: '1232-123-12-112'
+      window: {
+        olark: {
+          _: {
+            siteId: '1232-123-12-112'
+          }
         }
       }
     },

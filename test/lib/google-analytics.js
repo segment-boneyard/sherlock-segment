@@ -52,6 +52,9 @@ exports.settings = [
           }
         }
       }
+    },
+    expected: {
+      trackingId: 'UA-XXXXX-XX'
     }
   }
 ];

@@ -32,7 +32,7 @@ exports.settings = [
 
 exports.integration = [
   {
-    fixture: 'customer-id/index.html',
+    fixture: 'customerio/index.html',
     expected: {
       siteId: 'YOUR SITE ID HERE'
     }

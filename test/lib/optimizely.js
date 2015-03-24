@@ -10,12 +10,14 @@ exports.scripts = [
 exports.settings = [
   {
     ctx: {
-      optimizely: {
-        getProjectId: function () {
-          return 'a';
-        },
-        getAccountId: function () {
-          return 'b';
+      window: {
+        optimizely: {
+          getProjectId: function () {
+            return 'a';
+          },
+          getAccountId: function () {
+            return 'b';
+          }
         }
       }
     },

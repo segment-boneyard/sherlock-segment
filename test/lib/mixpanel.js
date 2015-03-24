@@ -10,13 +10,15 @@ exports.scripts = [
 exports.settings = [
   {
     ctx: {
-      mixpanel: {
-        config: {
-          token: 'a',
-          people: true,
-          trackAllPages: true,
-          trackCategorizedPages: false,
-          trackNamedPages: true
+      window: {
+        mixpanel: {
+          config: {
+            token: 'a',
+            people: true,
+            trackAllPages: true,
+            trackCategorizedPages: false,
+            trackNamedPages: true
+          }
         }
       }
     },

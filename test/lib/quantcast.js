@@ -10,9 +10,11 @@ exports.scripts = [
 exports.settings = [
   {
     ctx: {
-      __qc: {
-        qopts: {
-          qacct: 'p-23423sd'
+      window: {
+        __qc: {
+          qopts: {
+            qacct: 'p-23423sd'
+          }
         }
       }
     },
