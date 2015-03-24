@@ -4,16 +4,16 @@ var vm = require('vm');
 
 describe('integrations', function () {
   describe('AdRoll', function () {
-    var integration = integrations['AdRoll'];
+    var integration = require('../lib/adroll');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         'http://s.adroll.com/j/roundtrip.js',
         'https://s.adroll.com/j/roundtrip.js'
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -33,15 +33,15 @@ describe('integrations', function () {
   });
 
   describe('Alexa', function () {
-    var integration = integrations['Alexa'];
+    var integration = require('../lib/alexa');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         '//d31qbv1cthcecs.cloudfront.net/atrk.js'
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -63,16 +63,16 @@ describe('integrations', function () {
   });
 
   describe('Amplitude', function () {
-    var integration = integrations['Amplitude'];
+    var integration = require('../lib/amplitude');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         'api.amplitude.com',
         'd24n15hnbwhuhn.cloudfront.net'
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -92,15 +92,15 @@ describe('integrations', function () {
   });
 
   describe('Customer.io', function () {
-    var integration = integrations['Customer.io'];
+    var integration = require('../lib/customerio');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         '.customer.io'
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -122,15 +122,15 @@ describe('integrations', function () {
   });
 
   describe('Drip', function () {
-    var integration = integrations['Drip'];
+    var integration = require('../lib/drip');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         'https://tag.getdrip.com/8838307.js'
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -148,15 +148,15 @@ describe('integrations', function () {
   });
 
   describe('FullStory', function () {
-    var integration = integrations['FullStory'];
+    var integration = require('../lib/fullstory');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         'https://www.fullstory.com/s/fs.js'
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -172,9 +172,9 @@ describe('integrations', function () {
   });
 
   describe('Google Analytics', function () {
-    var integration = integrations['Google Analytics'];
+    var integration = require('../lib/google-analytics');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         'google-analytics.com/analytics.js',
         'google-analytics.com/urchin.js',
@@ -188,7 +188,7 @@ describe('integrations', function () {
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -232,15 +232,15 @@ describe('integrations', function () {
   });
 
   describe('Google Tag Manager', function () {
-    var integration = integrations['Google Tag Manager'];
+    var integration = require('../lib/google-tag-manager');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         '.googletagmanager.com'
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -259,15 +259,15 @@ describe('integrations', function () {
   });
 
   describe('Heap', function () {
-    var integration = integrations['Heap'];
+    var integration = require('../lib/heap');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         '.heapanalytics.com/js/heap-123.js'
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -285,15 +285,15 @@ describe('integrations', function () {
   });
 
   describe('Inspectlet', function () {
-    var integration = integrations['Inspectlet'];
+    var integration = require('../lib/inspectlet');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         'https://cdn.inspectlet.com/inspectlet.js'
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -323,16 +323,16 @@ describe('integrations', function () {
   });
 
   describe('Intercom', function () {
-    var integration = integrations['Intercom'];
+    var integration = require('../lib/intercom');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         'api.intercom.io/api/js/library.js',
         'https://widget.intercom.io/widget/'
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -368,16 +368,16 @@ describe('integrations', function () {
   });
 
   describe('Keen IO', function () {
-    var integration = integrations['Keen IO'];
+    var integration = require('../lib/keenio');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         'http://d26b395fwzu5fz.cloudfront.net/abc123/keen.min.js',
         'https://d26b395fwzu5fz.cloudfront.net/def456/keen.min.js'
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -403,9 +403,9 @@ describe('integrations', function () {
   });
 
   describe('KISSmetrics', function () {
-    var integration = integrations['KISSmetrics'];
+    var integration = require('../lib/kissmetrics');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         'doug1izaerwt3.cloudfront.net',
         'd1n7kk4vfnecsc.cloudfront.net',
@@ -413,7 +413,7 @@ describe('integrations', function () {
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -429,15 +429,15 @@ describe('integrations', function () {
   });
 
   describe('Mixpanel', function () {
-    var integration = integrations['Mixpanel'];
+    var integration = require('../lib/mixpanel');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         '.mxpnl.com'
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -467,15 +467,15 @@ describe('integrations', function () {
   });
 
   describe('Olark', function () {
-    var integration = integrations['Olark'];
+    var integration = require('../lib/olark');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         'http://static.olark.com/jsclient/loader0.js'
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -495,15 +495,15 @@ describe('integrations', function () {
   });
 
   describe('Optimizely', function () {
-    var integration = integrations['Optimizely'];
+    var integration = require('../lib/optimizely');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         'cdn.optimizely.com'
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -529,15 +529,15 @@ describe('integrations', function () {
   });
 
   describe('Quantcast', function () {
-    var integration = integrations['Quantcast'];
+    var integration = require('../lib/quantcast');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         'http://edge.quantserve.com/quant.js'
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -557,15 +557,15 @@ describe('integrations', function () {
   });
 
   describe('Totango', function () {
-    var integration = integrations['Totango'];
+    var integration = require('../lib/totango');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         'https://s3.amazonaws.com/totango-cdn/totango2.js'
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -583,9 +583,9 @@ describe('integrations', function () {
   });
 
   describe('Track JS', function () {
-    var integration = integrations['Track JS'];
+    var integration = require('../lib/trackjs');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         'dl1d2m8ri9v3j.cloudfront.net',
         'd2zah9y47r7bi2.cloudfront.net',
@@ -593,7 +593,7 @@ describe('integrations', function () {
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 
@@ -611,15 +611,15 @@ describe('integrations', function () {
   });
 
   describe('Woopra', function () {
-    var integration = integrations['Woopra'];
+    var integration = require('../lib/woopra');
 
-    it('should match all the correct URLs via pattern', function () {
+    it('should match all the correct URLs via script', function () {
       var urls = [
         'http://static.woopra.com/js/w.js'
       ];
 
       urls.forEach(function (url) {
-        assert(url.match(integration.pattern), url + ' should have been matched');
+        assert(url.match(integration.script), url + ' should have been matched');
       });
     });
 

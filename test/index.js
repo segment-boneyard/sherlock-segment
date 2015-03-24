@@ -3,15 +3,16 @@
  * Module dependencies.
  */
 
-var server = require('./server/index.js');
 var assert = require('assert');
+var integrations = require('..');
+var server = require('./server/index.js');
 var Sherlock = require('s-sherlock');
 
 /**
  * Initialize Sherlock.
  */
 
-var sherlock = Sherlock();
+var sherlock = new Sherlock().use(integrations);
 
 /**
  * Sherlock.
