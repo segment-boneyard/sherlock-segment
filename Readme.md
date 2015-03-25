@@ -1,3 +1,4 @@
+[![Circle CI](https://circleci.com/gh/segmentio/sherlock-segment.svg?style=svg&circle-token=819ecdd03271ce19e620fc17be63a41548629992)](https://circleci.com/gh/segmentio/sherlock-segment)
 
 # sherlock-segment
 
@@ -10,7 +11,7 @@
 ## Usage
 
 ```js
-var integrations = require('s-sherlock-integrations');
+var segment = require('s-sherlock-segment');
 var sherlock = require('sherlock');
 
 sherlock()

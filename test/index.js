@@ -9,7 +9,7 @@ var each = require('each-module');
 var integrations = require('..');
 var path = require('path');
 var server = require('./server/index.js');
-var Sherlock = require('s-sherlock');
+var Sherlock = require('sherlock-inspector');
 var url = require('url');
 var vm = require('vm');
 
