@@ -6,13 +6,13 @@
 
 ## Installation
 
-    $ npm install s-sherlock-segment
+    $ npm install sherlock-segment
 
 ## Usage
 
 ```js
-var segment = require('s-sherlock-segment');
-var sherlock = require('sherlock');
+var segment = require('sherlock-segment');
+var sherlock = require('sherlock-inspector');
 
 sherlock()
   .use(segment)
