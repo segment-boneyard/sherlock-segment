@@ -1,7 +1,11 @@
 {
   "name": "sherlock-segment",
   "description": "Sherlock plugin for Segment integrations",
-  "repository": "segmentio/sherlock-segment.git",
+  "keywords": [
+    "sherlock",
+    "segment"
+  ],
+  "repository": "segmentio/sherlock-segment",
   "version": "0.2.0",
   "license": "MIT",
   "main": "index.js",
