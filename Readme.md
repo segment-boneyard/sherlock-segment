@@ -2,7 +2,7 @@
 
 # sherlock-segment
 
-> Segment integrations as a plugin for [Sherlock]()
+> Segment integrations as a plugin for [Sherlock](http://github.com/segmentio/sherlock)
 
 ## Installation
 
