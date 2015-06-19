@@ -19,8 +19,5 @@
     "serve-static": "^1.9.2",
     "sherlock-inspector": "^0.1.1",
     "supertest": "^0.15.0"
-  },
-  "publishConfig": {
-    "registry": "http://registry.npmjs.org/"
   }
 }
